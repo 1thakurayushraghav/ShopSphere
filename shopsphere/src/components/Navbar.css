@@ -1,0 +1,44 @@
+/* Navbar.css */
+
+/* Navbar background with gradient */
+.navbar-custom {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Nav links and buttons (except logo) */
+.navbar-custom .nav-link,
+.navbar-custom .btn {
+  color: #ffffff; /* white text */
+  background: none; /* no bg by default */
+  border-radius: 0.25rem;
+  transition: color 0.3s, background 0.3s;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+
+/* Active link */
+.navbar-custom .nav-link.active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Hover effects for links and buttons */
+.navbar-custom .nav-link:hover,
+.navbar-custom .btn:hover {
+  color: #ffffff;
+  background: linear-gradient(45deg, #007bff, #28a745);
+}
+
+/* Dropdown items */
+.navbar-custom .dropdown-item {
+  color: #ffffff;
+  transition: color 0.3s, background 0.3s;
+  background: none;
+}
+
+/* Dropdown item hover */
+.navbar-custom .dropdown-item:hover {
+  color: #ffffff;
+  background: linear-gradient(45deg, #007bff, #28a745);
+}
