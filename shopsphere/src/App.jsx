@@ -14,12 +14,12 @@ import ProtectedRoute from './components/ProtectedRoute'
 
 // Pages
 import Home from './pages/Home'
-import ProductDetails from './pages/ProductDetails'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Orders from './pages/Orders'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Products from './pages/Products'
 
 function App() {
   useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
             <main style={{ minHeight: 'calc(100vh - 200px)' }}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/product/:id" element={<ProductDetails />} />
+                <Route path="/products" element={<Products />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/login" element={<Login />} />

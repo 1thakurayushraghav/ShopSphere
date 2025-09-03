@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useCart } from '../contexts/CartContext'
 import { useAuth } from '../contexts/AuthContext'
 import './Navbar.css'
@@ -8,6 +8,7 @@ const Navbar = () => {
   const { getCartItemsCount } = useCart()
   const { user, logout } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
   const cartItemsCount = getCartItemsCount()
 
   const handleLogout = () => {
@@ -38,10 +39,20 @@ const Navbar = () => {
           {/* Left Nav */}
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className={`nav-link ${window.location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
+              <Link 
+                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} 
+                to="/"
+              >
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${window.location.pathname === '/#products' ? 'active' : ''}`} to="/#products">Products</Link>
+              <Link 
+                className={`nav-link ${location.pathname === '/products' ? 'active' : ''}`} 
+                to="/products"
+              >
+                Products
+              </Link>
             </li>
           </ul>
 

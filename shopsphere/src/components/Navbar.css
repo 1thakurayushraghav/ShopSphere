@@ -19,9 +19,11 @@
 
 /* Active link */
 .navbar-custom .nav-link.active {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: #fff !important;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
 }
+
 
 /* Hover effects for links and buttons */
 .navbar-custom .nav-link:hover,
